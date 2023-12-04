@@ -1,0 +1,1039 @@
+{
+	"info": {
+		"_postman_id": "25d459ce-43ac-42c8-8c21-52bd27d77d46",
+		"name": "TPE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27785309",
+		"_collection_link": "https://interstellar-resonance-949184.postman.co/workspace/EspecialArquitecturas~efc4d386-0b4d-49b8-943a-16a2fd72f852/collection/27785309-25d459ce-43ac-42c8-8c21-52bd27d77d46?action=share&source=collection_link&creator=27785309"
+	},
+	"item": [
+		{
+			"name": "M_ADMIN",
+			"item": [
+				{
+					"name": "CUENTAS",
+					"item": [
+						{
+							"name": "CREATE",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwMTkyMzg1LCJleHAiOjE3MDAxOTI5ODV9.VImm01KBbgjrfmF42FmALGhvU7gOBCP3brgCwzFKReU",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCuenta\": 100,\r\n    \"saldo\": 499990.55,\r\n    \"fechaAlta\": \"2023-10-25\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8084/api/admin/cuenta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8084",
+									"path": [
+										"api",
+										"admin",
+										"cuenta"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jose\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"jose\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3B",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwMTkzMDE4LCJleHAiOjE3MDAxOTM2MTh9.rZsg_tBUtjefGV9uNVUknZOgfoP1V1bq2svzKaLaJYY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/cuenta/65",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"cuenta",
+								"65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3C",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwMTQ1NDQzLCJleHAiOjE3MDAxNDYwNDN9.xtHvM9jUng96_4wb1yDumNnUNqPihhjVd8JVmuIh6xI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/monopatin/año/2023?cantidad=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"monopatin",
+								"año",
+								"2023"
+							],
+							"query": [
+								{
+									"key": "cantidad",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3D",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwMjI1NTIyLCJleHAiOjE3MDAyMjYxMjJ9.Fek1z37S30gHepCLUEE4VYRR4Uyf45pehaFUXLsDdEg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/viaje/recaudacion?anio=2023&mesIni=1&mesFin=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"viaje",
+								"recaudacion"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2023"
+								},
+								{
+									"key": "mesIni",
+									"value": "1"
+								},
+								{
+									"key": "mesFin",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3E",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwMTk0MTQxLCJleHAiOjE3MDAxOTQ3NDF9.h71jyRsX7VQwiZeRu08m5wuYCeiRVP8FkPzbLbOqK6Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/monopatin/reporte",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"monopatin",
+								"reporte"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3F",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb3NlIiwiaWF0IjoxNzAwNjA4OTM4LCJleHAiOjE3MDA2MDk1Mzh9.GfqpZx6LM__WFAGLDBVjbDp7p7c7prnmRHUWu7i8iHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8084/api/admin/viaje/tarifa?precio=5000&fecha=2023-11-16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"api",
+								"admin",
+								"viaje",
+								"tarifa"
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "5000"
+								},
+								{
+									"key": "fecha",
+									"value": "2023-11-16"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "M_VIAJE",
+			"item": [
+				{
+					"name": "GetViajes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViajeId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Recaudacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/recaudacion?anio=2022-1-1&mesIni=2022-2-2&mesFin=2022-3-3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"recaudacion"
+							],
+							"query": [
+								{
+									"key": "anio",
+									"value": "2022-1-1"
+								},
+								{
+									"key": "mesIni",
+									"value": "2022-2-2"
+								},
+								{
+									"key": "mesFin",
+									"value": "2022-3-3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CantidadViajesDeMonopatinPorAño",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/year/2022?cantidad=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"year",
+								"2022"
+							],
+							"query": [
+								{
+									"key": "cantidad",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id_viaje\": 3,\r\n        \"id_cuenta\": 0,\r\n        \"id_monopatin\": 12,\r\n        \"fecha_inicio\": \"2022-11-01T03:00:00.000+00:00\",\r\n        \"fecha_fin\": \"2023-10-03T03:00:00.000+00:00\",\r\n        \"km_recorridos\": 22.2,\r\n        \"precio\": 400.0,\r\n        \"tarifa_extra\": 1111.0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/api/viaje",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Modificar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarTarifa",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/actualizar?precio=200&fecha=2022-2-2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"actualizar"
+							],
+							"query": [
+								{
+									"key": "precio",
+									"value": "200"
+								},
+								{
+									"key": "fecha",
+									"value": "2022-2-2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/api/viaje/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"viaje",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "M_USERS",
+			"item": [
+				{
+					"name": "CUENTAS",
+					"item": [
+						{
+							"name": "GetAllCuentas",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cuenta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cuenta"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCuentaId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cuenta/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cuenta",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CrearCuenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCuenta\": 0,\r\n    \"saldo\": 400.55,\r\n    \"fechaAlta\": \"2023-10-25\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/cuenta",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cuenta"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModificarCuenta",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCuenta\": 2,\r\n    \"saldo\": 9000.55,\r\n    \"fechaAlta\": \"2023-10-25\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/cuenta/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cuenta",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "BorrarCuenta",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/cuenta/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"cuenta",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "USUARIOS",
+					"item": [
+						{
+							"name": "GetAllUsuario",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CrearUsuario",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"nombre\": \"Jose\",\r\n  \"apellido\": \"Guidi\",\r\n  \"mail\": \"joseguidi@gmail\",\r\n  \"numTelefono\": 249495804\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuario",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "ModificarUsuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"idUsuario\": 2,\r\n  \"nombre\": \"aaa\",\r\n  \"apellido\": \"Guidi\",\r\n  \"mail\": \"jose@gmail\",\r\n  \"numTelefono\": 222222\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/usuario/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "EliminarUsuario",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuario/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "3G",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/usuario/monopatines/cerca?latitud=50&longitud=10&distancia=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"usuario",
+										"monopatines",
+										"cerca"
+									],
+									"query": [
+										{
+											"key": "latitud",
+											"value": "50"
+										},
+										{
+											"key": "longitud",
+											"value": "10"
+										},
+										{
+											"key": "distancia",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "M_MONOPATIN",
+			"item": [
+				{
+					"name": "GetAllMonopatines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/monopatin",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"monopatin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetMonopatinId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/monopatin/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"monopatin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ModificarMonopatin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 54,\r\n  \"estado\": \"Disponible\",\r\n  \"kilometros\": 250,\r\n  \"latitud\": \"200\",\r\n  \"longitud\": \"55\",\r\n  \"tiempoEnUso\": 10000,\r\n  \"tiempoEnPausa\": 10,\r\n  \"idParada\":54\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/monopatin/5",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"monopatin",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarMonopatin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 0,\r\n  \"estado\": \"Disponible\",\r\n  \"kilometros\": 0,\r\n  \"latitud\": \"154.366\",\r\n  \"longitud\": \"25.9\",\r\n  \"tiempoEnUso\": 0,\r\n  \"tiempoEnPausa\":0,\r\n  \"parada\": {\r\n    \"id\": 2\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/monopatin",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"monopatin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BorrarMonopatin",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/monopatin/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"monopatin",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "M_MANTENIMIENTO",
+			"item": [
+				{
+					"name": "Change status",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"estado\":\"Mantenimiento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/api/mantenimiento/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"mantenimiento",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reporte",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8088/api/mantenimiento/reporte?pausa=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"mantenimiento",
+								"reporte"
+							],
+							"query": [
+								{
+									"key": "pausa",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
