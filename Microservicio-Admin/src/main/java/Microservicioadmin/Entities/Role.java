@@ -1,6 +1,5 @@
 package Microservicioadmin.Entities;
 
 public enum Role {
-	ADMIN,
-	USER
+    USUARIO,MANTENIMIENTO,ADMINISTRADOR
 }

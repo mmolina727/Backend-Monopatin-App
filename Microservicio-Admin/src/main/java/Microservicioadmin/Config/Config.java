@@ -1,6 +1,6 @@
 package Microservicioadmin.Config;
 
-
+import Microservicioadmin.Repositories.RepositorioUsuario;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,12 +13,11 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.client.RestTemplate;
-import Micoservicioadmin.Repositories.RepositorioUsuario;
 
 @Configuration
 @RequiredArgsConstructor
 public class Config {
-	private  RepositorioUsuario repositorioUsuario;
+	private final RepositorioUsuario repositorioUsuario;
 
 		@Bean
 		public RestTemplate createRestTemplate() {

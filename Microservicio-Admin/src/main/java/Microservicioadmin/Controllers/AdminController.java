@@ -1,5 +1,7 @@
 package Microservicioadmin.Controllers;
 
+import Microservicioadmin.Security.Model.AuthResponse;
+import Microservicioadmin.Security.Model.LoginRequest;
 import Microservicioadmin.Services.AuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,9 +19,6 @@ import org.springframework.web.bind.annotation.*;
 import Microservicioadmin.Dto.DtoCuenta;
 import Microservicioadmin.Dto.DtoMonopatin;
 import Microservicioadmin.Dto.DtoParada;
-import Microservicioadmin.Jwt.AuthResponse;
-import Microservicioadmin.Jwt.LoginRequest;
-import Microservicioadmin.Jwt.RegisterRequest;
 import Microservicioadmin.Services.AdminService;
 
 import java.util.Date;
@@ -33,7 +32,7 @@ public class AdminController {
 	@Autowired
 	AdminService service;
 	@Autowired
-	private  AuthService authService;
+	private final AuthService authService;
 	
 	
 	@PutMapping("/viaje/tarifa")
@@ -162,8 +161,8 @@ public class AdminController {
 		return ResponseEntity.ok(authService.login(loginRequest));
 	}
 	@PostMapping("/register")
-	public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest registerRequest){
-		return ResponseEntity.ok(authService.register(registerRequest));
+	public ResponseEntity<AuthResponse> register(@RequestBody LoginRequest loginRequest){
+		return ResponseEntity.ok(authService.register(loginRequest));
 	}
 
 }
