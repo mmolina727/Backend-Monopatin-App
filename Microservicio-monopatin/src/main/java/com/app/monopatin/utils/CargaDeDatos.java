@@ -31,7 +31,7 @@ public class CargaDeDatos {
     @PostConstruct
     public void readCsvFile() {
         try {
-            FileReader fileReader2 = new FileReader("C:\\Users\\joseg\\IdeaProjects\\Arquitecturas\\DAOProyect\\Microservicios\\microservicio-monopatin\\src\\main\\resources\\paradas.csv");
+            FileReader fileReader2 = new FileReader("src/main/resources/paradas.csv");
             CSVParser csvParser2 = new CSVParser(fileReader2, CSVFormat.DEFAULT.withHeader());
             for (CSVRecord record : csvParser2) {
                 System.out.println(record);
@@ -41,7 +41,7 @@ public class CargaDeDatos {
                 paradaRepository.save(p);
             }
 
-            FileReader fileReader = new FileReader("C:\\Users\\joseg\\IdeaProjects\\Arquitecturas\\DAOProyect\\Microservicios\\microservicio-monopatin\\src\\main\\resources\\monopatines.csv");
+            FileReader fileReader = new FileReader("src/main/resources/monopatines.csv");
             List<Parada> listP = paradaRepository.findAll();
             CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT.withHeader());
             for (CSVRecord record : csvParser) {

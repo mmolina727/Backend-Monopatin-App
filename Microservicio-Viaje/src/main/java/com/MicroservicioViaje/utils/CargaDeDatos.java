@@ -26,7 +26,7 @@ public class CargaDeDatos {
     @PostConstruct
     public void readCsvFile() {
         try {
-            FileReader fileReader = new FileReader("C:\\Users\\joseg\\IdeaProjects\\Arquitecturas\\DAOProyect\\Microservicios\\Microservicio-Viaje\\src\\main\\resources\\viaje.csv");
+            FileReader fileReader = new FileReader("src/main/resources/viaje.csv");
             CSVParser csvParser = new CSVParser(fileReader, CSVFormat.DEFAULT.withHeader());
             for (CSVRecord record : csvParser) {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
