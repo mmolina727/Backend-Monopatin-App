@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 
+    url: jdbc:mysql://localhost:3306/microservice-user?createDatabaseIfNotExist=true
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
+
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /doc/swagger-ui.html
