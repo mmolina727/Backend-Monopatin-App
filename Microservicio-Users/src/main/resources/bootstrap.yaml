@@ -1,7 +1,17 @@
 spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 
+    url: jdbc:mysql://localhost:3306/microservice-user?createDatabaseIfNotExist=true
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      ddl-auto: update
   application:
     name: User-Microservice
   cloud:
     config:
       enabled: true
-      uri: http://localhost:8086
+      uri: http://localhost:8080
