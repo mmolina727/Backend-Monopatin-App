@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          default-label: main
+          default-label: spring-cloud
           uri: https://github.com/mmolina727/Backend-Monopatin-App
           search-paths: config-data
   application:
