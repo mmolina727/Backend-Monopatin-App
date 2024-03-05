@@ -6,7 +6,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import java.io.IOException;
 
-@EnableDiscoveryClient
+
 @SpringBootApplication
 public class MicroservicioAdminApplication {
 

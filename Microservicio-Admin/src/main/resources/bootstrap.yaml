@@ -1,4 +1,10 @@
 spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: microservicio_admin
+      uri: mongodb://localhost:27017/microservicio_admin
   application:
     name: Admin-Microservice
   cloud:

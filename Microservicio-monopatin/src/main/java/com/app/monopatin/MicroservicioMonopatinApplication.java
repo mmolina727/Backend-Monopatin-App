@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import com.app.monopatin.utils.CargaDeDatos;
 
-@EnableDiscoveryClient
+
 @SpringBootApplication
 public class MicroservicioMonopatinApplication {
 	

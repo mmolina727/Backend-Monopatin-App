@@ -7,7 +7,6 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 import com.MicroservicioViaje.utils.CargaDeDatos;
 
-@EnableDiscoveryClient
 @SpringBootApplication
 public class MicroservicioViajeApplication {
 	
